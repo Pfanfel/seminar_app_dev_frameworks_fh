@@ -1,0 +1,98 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Kopf- und Fußzeilendefinition%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[headsepline,footsepline]{scrlayer-scrpage}	%mit Trennlinien
+\pagestyle{scrheadings}					%Seitenstil umdefiniert
+\clearpairofpagestyles					%Definition leermachen
+\renewcommand{\chapterpagestyle}{scrheadings}		%Kapitelseitenstil umdefiniert
+\renewcommand{\chaptermark}[1]{\markboth{\ #1}{}}	%Definition Kapitel?berschrift=\leftmark
+\ohead{\leftmark}				%äußere Kopfzeile
+\chead{}						%mittlere Kopfzeile
+\ihead{}						%innere Kopfzeile
+\ofoot{\thepage}				%äußere Fu?zeile
+\cfoot{}						%mittlere Fu?zeile
+\ifoot{}						%innere Fu?zeile
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%deutsche Zeichenkodierung%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[english,ngerman]{babel} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%Verschiedene Schriftarten%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{crimson}
+%\usepackage[adobe-utopia]{mathdesign}
+%\usepackage{libertine}
+%\usepackage{lmodern}
+%\usepackage{kpfonts}
+\usepackage{stix}
+%\usepackage{libertinust1math}
+\usepackage[T1]{fontenc}
+%\renewcommand*\familydefault{\sfdefault}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%Zusatzpackages%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{a4wide}
+\usepackage{longtable}
+\usepackage{longtable}
+\usepackage[locale=DE]{siunitx}
+\usepackage{eurosym}					%Fancy ? Zeichen
+\usepackage{acronym}					%Abk?rzungsverzeichnis
+\usepackage{wasysym}					%Symbole und Sonderzeichen
+\usepackage{longtable}					%Formelzeichentabelle/lange Tabelle
+\usepackage{romannum}					%R?mische Zahlen
+\usepackage{wrapfig}					%Bilder nebeneinander/ Text neben Bild
+\usepackage{floatflt,epsfig} 				%Bilder im eps-format einf?gen
+\usepackage{exceltex}					%Exceldokumente einbinden
+\usepackage{multirow}					%Tabellenzellen verbinden
+\usepackage{multicol}					%Mehrere Spalten
+\usepackage{graphicx}					%fuer bilder
+\graphicspath{ {./bilder/} }
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+
+\usepackage[hyphens]{url}				%Websites einbinden
+\usepackage{hyphsubst}
+\usepackage{pdfpages} 					%direkt pdf Datein einbinden
+\usepackage{amsmath}					%matheumgebung f?r Formeln und Gleichungen
+\usepackage{booktabs}					%ich glaube f?r links im PDF
+\usepackage{capt-of}					%Captions f?r non-float-Objekte
+\usepackage{appendix}					%erm?glicht das erstellen von Anhangsverzeichnissen
+\usepackage{tikz}					%tikz Paket f?r Grafiken + Definitionen
+\usepackage{multicol}               % Mehrspaltige Bereiche	
+\usepackage[euler]{textgreek}		%greek chars without math mode
+\usepackage{caption}				%multiline caption
+\usepackage{tabularx}
+\usetikzlibrary{arrows,positioning}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{shapes.geometric}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%special Stuff%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[colorlinks,    				%PDF linked Verzeichnis
+pdfpagelabels,
+pdfstartview = FitH,
+bookmarksopen = true,
+bookmarksnumbered = true,
+linkcolor = black,
+plainpages = false,
+hypertexnames = false,
+citecolor = black,
+breaklinks = true,
+allcolors = black] {hyperref}  
+
+\usepackage[english,ngerman]{cleveref} 				%Bessere Referenzen nach hyperref!
+
+%\renewcommand{\labelitemi}{-}   %aufzählungszeichen strich statt punkt - beliebig anpassbar
+\usepackage{csquotes}
+\usepackage[backend=biber,
+			sorting=none
+			]{biblatex}
+\addbibresource{literature.bib}

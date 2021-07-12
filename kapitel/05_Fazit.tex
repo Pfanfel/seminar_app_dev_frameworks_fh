@@ -1,0 +1,32 @@
+\chapter{Fazit}
+
+Die Entwicklung einer Anwendung mithilfe eines cross-plattform Frameworks verringert den Entwicklungsaufwand und die dafür notwendige Zeit. Dies führt zu schnelleren Ergebnissen, da die Anwendung nur auf einer Codebasis aufbaut. Jedoch existiert einer Vielzahl an verschiedenen Entwicklungsansätzen, welche alle bestimmte Vor- und Nachteile bieten. Dazu gehören (Progressive) Web-Apps, hybride Apps, Apps mit eigener Laufzeitumgebung, cross-kompilierte sowie generierte Apps.\\
+
+Allgemein lässt sich feststellen, dass native Apps die meisten Features bieten, dies jedoch  auf Kosten der Notwendigkeit zwei komplett eigenständige Anwendungen entwickeln zu müssen. Auf der anderen Seite des Spektrums befinden sich Web-Applikationen, welche einfacher zu entwickeln und pflegen sind, meist jedoch nicht die benötigen Features bereitstellen. Diese Lücke versuchen \ac{PWA}s zu füllen, indem diese einige native Funktionalitäten bereitstellen und somit die größten Nachteile der Web-Applikationen aufheben. Hybride App Frameworks versuchen die Vorteile der Entwicklung mit Web-Technologie sowie den Zugang zu Hardware-Features für die Erstellung von Apps, welche über den App-Store verteilt werden können, zugänglich zu machen. Diese haben jedoch den Nachteil, dass damit der native \glqq Look and Feel\grqq\ einer nativen App nicht trivial repliziert werden kann. Auf einer eigenen Laufzeitumgebung basierende Apps versuchen diesen Nachteil zu umgehen, in dem native \ac{UI}-Komponenten verwendet werden, welche mit JavaScript definiert werden können. Einen neuen Weg versucht das Flutter Framwork zu gehen. Dieses cross-kompilierende Framework verwaltet die Darstellung und Rendering der \ac{UI}-Komponenten selbst und versucht somit die Performance-Probleme der Framworks mit eigenständiger Laufzeitumgebung zu beheben. Der aktuelle Trend spricht derzeit für diesen Game-Engine-ähnlichen Ansatz, jedoch bleibt abzuwarten, ob sich dieser Trend fortsetzt, da die Entwicklung sich noch am Anfang befindet.\\
+
+\newpage
+
+Welches Framework sollte denn nun für das nächste Projekt verwendet werden?
+Diese Frage ist stark einzelfallabhängig und es gibt, wie so häufig, keine eindeutige Antwort. Jedoch möchte ich trotzdem einige grundsätzliche Fragen formulieren, welche bei der Evaluation solcher Frameworks beantwortet werden können, um die Auswahl zu vereinfachen.
+Zunächst wäre es sinnvoll folgende Fragen bezüglich der Anwendung und der Zielgruppe zu beantworten.\\
+
+
+\begin{multicols}{2}
+	\begin{itemize}
+		\vspace{-2mm}
+		\setlength\itemsep{0mm}
+		\item Welches Problem wird mit der Anwendung für wen gelöst?
+		\item Welche Technik ist die Zielgruppe vertraut?
+		\item Mit welchen Entwicklungsansätzen, Sprachen und Frameworks sind die Entwickler vertraut?
+		\item Wie soll die Anwendung verteilt werden? (App-/Playstore oder Browser)
+		\item Wie performant soll die Anwendung sein?
+		\item Wie viele und welche plattformspezifische Features sollen verwendet werden?
+		\item Ist eine Internetverbindung am Einsatzort verfügbar?
+		\item Müssen spezifische Zertifizierungen wie z.B. im Gesundheits- und Finanzsektor erfüllt werden?
+	\end{itemize}
+\end{multicols}
+
+Erst nachdem die vorangestellten Fragen beantwortet wurden, sollten die verschiedenen Vor- und Nachteile der verschiedenen Entwicklungsansätzen gegeneinander aufgewogen und verglichen werden.\\
+
+Aufgrund der in der Arbeit genannten Punkte ist es für ein Team, welches keine ausgeprägten Kenntnisse mit Web-Technologien besitzt, meistens besser Flutter zu verwenden. Falls im Entwicklerteam bereits Web-Kenntnisse mit React vorhanden sind, ist React Native eine sinnvolle Wahl. Ansonsten bietet Ionic eine flexible Alternative, da dort verschiedene Front-End-Frameworks verwendet werden können.
+

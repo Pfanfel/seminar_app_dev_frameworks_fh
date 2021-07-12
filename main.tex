@@ -1,0 +1,105 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%Dokumentdefinition%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[oneside,11pt,a4paper,numbers=noenddot]{scrreprt} 
+\usepackage{geometry}
+\geometry{a4paper, top=25mm, left=30mm, right=25mm, bottom=20mm, headsep=5mm, footskip=12mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Inputfile für Packages (hält das Dokument sauber)%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{main_packages.tex}
+	
+
+\sloppy 						%"schlampiger" Blocksatz
+\parindent0cm 					%Absatzeinzug
+
+\usepackage{setspace} 			%Zeilenabstand
+\onehalfspacing
+%\singlespacing
+%\doublespacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%hier startet das eigentliche Dokument%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}				
+	\pagenumbering{Roman}				%Seitennummerierung auf römisch geändert
+	\begin{titlepage}					%gesondert formatierte Titelseite
+		\input{kapitel/00_Deckblatt.tex} 		
+	\end{titlepage}
+	\thispagestyle{empty}
+	\cleardoublepage
+		
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%\input{kapitel/01_Notwendiges.tex}%Vorwort, Editorial, Erklärungen, Vermerke%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	
+	\newpage
+	%\begin{singlespace}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%Verzeichnisse%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\setcounter{secnumdepth}{2} 	%countertiefe für Verzeichnisse
+	\setcounter{tocdepth}{2}		%Auflistungstiefe für Verzeichnisse
+	\chaptermark{Inhaltsverzeichnis}
+	\tableofcontents 						%Befehl für Inhaltsverzeichnis
+	\newpage
+	\listoffigures 							%Befehl für Abbildungsverzeichnis
+	\addcontentsline{toc}{chapter}{Abbildungsverzeichnis} 		
+	\chaptermark{Abbildungsverzeichnis}
+	\newpage
+	
+	\listoftables							%Befehl für Tabellenverzeichnis
+	\addcontentsline{lot}{chapter}{Tabellenverzeichnis}
+	\chaptermark{Tabellenverzeichnis}
+	\newpage
+	
+	\chapter*{Abkürzungsverzeichnis}
+	\begin{acronym}
+		\acro{SDK}{Software Development Kit}
+		\acro{API}{Application Programming Interface}
+		\acro{HTML}{Hypertext Markup Language}
+		\acro{CSS}{Cascading Style Sheets}
+		\acro{SASS}{Syntactically Awesome Stylesheets}
+		\acro{HTTPS}{Hypertext Transfer Protocol Secure}
+		\acro{PWA}{Progressive Web App}
+		\acro{UI}{User Interface}
+		\acro{UX}{User Experience}
+		\acro{URL}{Uniform Resource Locator}
+		\acro{JIT}{Just in Time}
+		\acro{AOT}{Ahead of Time}
+		\acro{DOM}{Document Object Model}
+		\acro{VM}{Virtual Machine}
+	\end{acronym}
+	\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}		%ins Inhaltsverzeichnis schreiben
+	\chaptermark{Abkürzungsverzeichnis}
+	
+	
+	
+	
+	%\end{singlespace}
+	\cleardoublepage
+	\pagenumbering{arabic}			%ab hier arabische Seitenzahlen
+	
+	%Vorlagenkapitel
+	\include{kapitel/01_Einleitung}
+    \include{kapitel/02_Therorie}
+	\include{kapitel/03_Kategorisierung}
+	\include{kapitel/04_Framework_Beispiele}
+	\include{kapitel/05_Fazit}
+	%%%Ab hier werden die einzelnen Kapitel als extra .tex Dateien angehängt
+	%%%Die Kapitel brauchen dabei keine Formatierungen, nur Überschriften etc.
+	%%%Alle .tex in einem Ordner%%%
+	%\input{}
+	\printbibliography[heading=bibintoc,title={Literaturverzeichnis}]
+	
+	%\clearpage
+	
+	%\chapter{Anhang}
+	
+	
+	
+\end{document}
